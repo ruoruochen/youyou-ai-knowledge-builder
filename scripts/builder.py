@@ -94,7 +94,8 @@ def create(parent, name, mode, timezone='UTC', review_time='20:30', protected=()
             + '`\n\n在AI中交流，明确说“记下来”才保存。找我的只查项目、资产、技能与模板；资源和灵感库是外部输入。\n\n'
             + '[[项目/每日流/今日|今日]] · [[项目/每日流/待处理事项|待处理事项]]\n\n'
             + '日报只索引已保存的个人内容。提醒检查逻辑已提供，真实定时任务尚未配置。\n\n'
-            + '用AI时提供本库根目录与完整身份ID，读取库外同级AGENTS.md和API.md。\n', encoding='utf-8')
+            + '同一对话说“继续用这个知识库”即可；换Agent时提供下面的交接文件，由Agent读取并核验目录与完整ID。\n\n'
+            + '交接文件：`' + str(root / 'handoff.json') + '`\n', encoding='utf-8')
         dailyflow.configure(timezone, review_time)
         dailyflow.refresh(bridge.Vault(vault_root))
         value['state'] = 'ready'

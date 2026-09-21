@@ -1,4 +1,4 @@
 interface:
   display_name: "AI知识库建造器"
   short_description: "为不同AI创建独立知识库，支持对话保存、检索和隔离测试"
-  default_prompt: "使用 $youyou-ai-knowledge-builder 在指定目录创建一个隔离的AI知识库，并验证不影响已有知识库。"
+  default_prompt: "请使用 $youyou-ai-knowledge-builder 帮我搭建自己的AI知识库。"
